@@ -76,8 +76,8 @@ We welcome contributions! Follow these steps to contribute:
 ## 📧 Contact
 If you have any issues or suggestions, feel free to reach out!
 - **Author:** Jai Kumar Mangla
-- **Email:** your.email@example.com
-- **GitHub:** [your-username](https://github.com/your-username)
+- **Email:** jaikumarmangla9@example.com
+- **GitHub:** [jaikumarmangla16](https://github.com/jaikumarmangla16)
 
 ---
 
