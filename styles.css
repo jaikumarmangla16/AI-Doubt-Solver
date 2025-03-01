@@ -1,0 +1,215 @@
+/* General Styling for the Chat Box */
+.chat-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 500px;
+  background-color: #2b384e; /* Updated background color */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+  cursor: move;
+  z-index: 9999;
+  will-change: transform;
+  transition: box-shadow 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  border: 1px solid #1f2836; /* Darker border color */
+  animation: fadeIn 0.5s ease-in-out; /* Fade-in effect on load */
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Chat Header */
+.chat-header {
+  background-color: #1f2836; /* Darker background for header */
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  border-radius: 15px 15px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Close Button in Chat Header */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Chat Content */
+.chat-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #161d29; /* Darker background for content area */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 14px;
+}
+
+/* Chat Messages */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* User Message Style */
+.message {
+  background-color: #2b384e; /* Darker blue for user messages */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  align-self: flex-end;
+  word-wrap: break-word;
+  font-size: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* AI Message Style */
+.bot-message {
+  background-color: #1f2836; /* Darker background for bot messages */
+  color: #f0f0f0;
+  align-self: flex-start;
+}
+
+/* Input Field and Send Button */
+#userQuery {
+  width: calc(100% - 110px);
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 25px;
+  border: 1px solid #1f2836; /* Dark border color */
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  background-color: #161d29; /* Darker background for the input */
+  color: white;
+}
+
+#userQuery:focus {
+  border-color: #2b384e; /* Lighter color on focus */
+  box-shadow: 0 0 8px rgba(43, 56, 78, 0.3);
+}
+
+.send-btn {
+  width: 80px;
+  padding: 12px;
+  margin-left: 10px;
+  background-color: #2b384e; /* Matching dark blue */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #3c4e69; /* Slightly lighter blue on hover */
+}
+
+/* Resizer for the Chat Box */
+.resizer {
+  width: 20px;
+  height: 20px;
+  background-color: #2b384e;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+/* Styling for the Logo */
+.ai-logo {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.ai-logo:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+
+/* General Button Styling */
+.clear-btn, .export-btn {
+  width: 80px;  /* Reduced width */
+  padding: 8px; /* Reduced padding */
+  margin: 5px;
+  background-color: #ff4c4c; /* Red for clear */
+  color: white;
+  border: none;
+  border-radius: 20px; /* Slightly smaller border radius */
+  cursor: pointer;
+  font-size: 12px; /* Smaller font size */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Space for icon */
+  box-shadow: 0 2px 8px rgba(255, 76, 76, 0.3);
+}
+
+/* Export Button Style */
+.export-btn {
+  background-color: #4CAF50; /* Green for export */
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Hover Effects */
+.clear-btn:hover {
+  background-color: #ff3232;
+  box-shadow: 0 2px 10px rgba(255, 50, 50, 0.5);
+}
+
+.export-btn:hover {
+  background-color: #45a049;
+  box-shadow: 0 2px 10px rgba(69, 160, 73, 0.5);
+}
+
+/* Adding icons inside the buttons */
+.clear-btn::before {
+  content: "🗑"; /* Trash bin icon */
+  font-size: 14px; /* Adjusted icon size */
+}
+
+.export-btn::before {
+  content: "📥"; /* Download icon */
+  font-size: 14px;
+}
+
+  
+
+
+

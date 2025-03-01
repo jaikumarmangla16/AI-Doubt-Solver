@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "AI Doubt Solver for Maang",
+  "version": "1.0",
+  "author": "Jai Kumar Mangla",
+  "description": "AI-powered doubt solver for maang.in/problems using Gemini API.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://maang.in/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_icon": "assets/bookmark.png",
+    "default_popup": "popup.html",
+    "default_title": "AI Doubt Solver - Enter your Gemini API Key"
+  },
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ]
+}
