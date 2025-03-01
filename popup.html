@@ -6,29 +6,111 @@
     <title>AI Doubt Solver</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            padding: 10px;
-            width: 250px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 15px;
+            width: 300px;
+            background-color: #f8f9fa;
+            margin: 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+        
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        h3 {
+            color: #1f2836;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 18px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
         input {
             width: 100%;
-            padding: 5px;
+            padding: 10px 12px;
             margin: 5px 0;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: border-color 0.2s;
         }
+        
+        input:focus {
+            outline: none;
+            border-color: #1f2836;
+            box-shadow: 0 0 0 3px rgba(31, 40, 54, 0.1);
+        }
+        
         button {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             background-color: #1f2836;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        
+        button:hover {
+            background-color: #2c3a51;
+        }
+        
+        button:active {
+            transform: scale(0.98);
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .logo img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 12px;
+            color: #6c757d;
         }
     </style>
 </head>
 <body>
-    <h3>Enter Your Gemini API Key</h3>
-    <input type="text" id="apiKeyInput" placeholder="Your API Key" />
-    <button id="saveButton">Save API Key</button>
+    <div class="container">
+        <div class="logo">
+            <!-- If you have a logo, uncomment and use the image path -->
+            <!-- <img src="assets/icon.png" alt="AI Doubt Solver"> -->
+            <h3>AI Doubt Solver</h3>
+        </div>
+        
+        <div class="input-group">
+            <label for="apiKeyInput">Enter Your Gemini API Key</label>
+            <input type="text" id="apiKeyInput" placeholder="Your API Key" autocomplete="off" />
+        </div>
+        
+        <button id="saveButton">Save API Key</button>
+        
+        <div class="footer">
+            Your AI assistant for coding problems
+        </div>
+    </div>
     <script src="popup.js"></script>
 </body>
 </html>
